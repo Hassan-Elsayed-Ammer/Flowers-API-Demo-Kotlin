@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/flowersListFragment">
+
+    <fragment
+        android:id="@+id/flowersListFragment"
+        android:name="com.codestation.flowers_api_demo_kotlin.fragments.FlowersListFragment"
+        android:label="fragment_flowers_list"
+        tools:layout="@layout/fragment_flowers_list" >
+        <action
+            android:id="@+id/action_flowersListFragment_to_flowerFragment"
+            app:destination="@id/flowerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/flowerFragment"
+        android:name="com.codestation.flowers_api_demo_kotlin.fragments.FlowerFragment"
+        android:label="fragment_flower"
+        tools:layout="@layout/fragment_flower" >
+        <action
+            android:id="@+id/action_flowerFragment_to_flowersListFragment"
+            app:destination="@id/flowersListFragment" />
+    </fragment>
+</navigation>
