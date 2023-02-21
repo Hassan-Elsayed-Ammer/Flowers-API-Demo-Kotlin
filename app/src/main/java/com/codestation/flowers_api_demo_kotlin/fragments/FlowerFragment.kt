@@ -6,16 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.codestation.flowers_api_demo_kotlin.R
+import com.codestation.flowers_api_demo_kotlin.databinding.FragmentFlowerBinding
 
 
 class FlowerFragment : Fragment() {
+
+    private lateinit var binding: FragmentFlowerBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_flower, container, false)
+        binding = FragmentFlowerBinding.inflate(inflater, container, false)
+
+        return binding.root
     }
 
 
